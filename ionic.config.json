@@ -1,0 +1,8 @@
+{
+  "name": "tabs",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "pro_id": "2bec2e27"
+}
