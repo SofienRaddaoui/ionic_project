@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController } from 'ionic-angular';
+import { IonicPage, NavController, AlertController } from 'ionic-angular';
 
 /**
  * The Welcome Page is a splash page that quickly describes the app,
@@ -14,7 +14,19 @@ import { IonicPage, NavController } from 'ionic-angular';
 })
 export class WelcomePage {
 
-  constructor(public navCtrl: NavController) { }
+  constructor(public navCtrl: NavController, public alertCtrl: AlertController) { 
+
+    this.showAlert();
+  }
+
+  showAlert() {
+    const alert = this.alertCtrl.create({
+      title: 'New Friend!',
+      subTitle: 'Your friend, Obi wan Kenobi, just accepted your friend request!',
+      buttons: ['OK']
+    });
+    alert.present();
+  }
 
   login() {
     this.navCtrl.push('LoginPage');
